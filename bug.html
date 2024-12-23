@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be hidden initially.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      // Incorrect way to show the div
+      document.getElementById("myDiv").style.display = "block";
+      document.getElementById("myDiv").style.visibility = "hidden"; // Conflicting styles 
+    }
+  </script>
+</body>
+</html>
